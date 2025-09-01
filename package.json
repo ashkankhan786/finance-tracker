@@ -1,0 +1,31 @@
+{
+  "name": "finance-tracker",
+  "version": "1.0.0",
+  "description": "Full-stack application with React frontend and Express backend",
+  "keywords": [
+    "react",
+    "express",
+    "fullstack",
+    "nodejs"
+  ],
+  "license": "MIT",
+  "author": "Your Name",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "install-server": "cd backend && npm install",
+    "install-client": "cd frontend && npm install",
+    "install-all": "npm run install-server && npm run install-client",
+    "start": "cd backend && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
