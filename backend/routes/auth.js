@@ -60,8 +60,8 @@ router.post("/google", async (req, res) => {
 
     res.cookie("jid", refreshToken, {
       httpOnly: true,
-      secure: false,
-      sameSite: "lax",
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "None" : "lax",
     });
     res.json({
       success: true,
